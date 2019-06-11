@@ -1,0 +1,16 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #64329d;
+    background-image: linear-gradient(to bottom right, #64329d, yellow);
+    background-repeat: no-repeat;
+}
+
+.bg-primary {
+    background-color: #2e0e54 !important;
+}
+
+
+.navbar-nav {
+    padding-left: 60%;
+}
