@@ -1,9 +1,13 @@
 body {
     height: 100%;
     margin: 0;
-    background-color: #64329d;
-    background-image: linear-gradient(to bottom right, #64329d, yellow);
+    background-color: #55238e;
+    background-image: linear-gradient(to bottom right, #55238e, #421377);
     background-repeat: no-repeat;
+}
+
+#logo {
+    height: 50px;
 }
 
 .bg-primary {
