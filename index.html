@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="sources/css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="sources/css/style.css" type="text/css">
 
-    
+
 </head>
 
 <body>
@@ -44,52 +44,117 @@
             <div class="row">
                 <!-- ************* Map section ************* -->
                 <div class="col-md-6 col-sm-12">
-                    <div id="map">
-                        <h1>Map</h1>
+                    <div id="findhotels">
+                        Find hotels in:
+                    </div>
+
+                    <div id="locationField">
+                        <input id="autocomplete" placeholder="Enter a city" type="text" />
+                    </div>
+
+                    <div id="controls">
+                        <select id="country">
+        <option value="all">All</option>
+        <option value="au">Australia</option>
+        <option value="br">Brazil</option>
+        <option value="ca">Canada</option>
+        <option value="fr">France</option>
+        <option value="de">Germany</option>
+        <option value="mx">Mexico</option>
+        <option value="nz">New Zealand</option>
+        <option value="it">Italy</option>
+        <option value="za">South Africa</option>
+        <option value="es">Spain</option>
+        <option value="pt">Portugal</option>
+        <option value="us" selected>U.S.A.</option>
+        <option value="uk">United Kingdom</option>
+      </select>
+                    </div>
+
+                    <div id="map"></div>
+
+                    <div id="listing">
+                        <table id="resultsTable">
+                            <tbody id="results"></tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none">
+                        <div id="info-content">
+                            <table>
+                                <tr id="iw-url-row" class="iw_table_row">
+                                    <td id="iw-icon" class="iw_table_icon"></td>
+                                    <td id="iw-url"></td>
+                                </tr>
+                                <tr id="iw-address-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Address:</td>
+                                    <td id="iw-address"></td>
+                                </tr>
+                                <tr id="iw-phone-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Telephone:</td>
+                                    <td id="iw-phone"></td>
+                                </tr>
+                                <tr id="iw-rating-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Rating:</td>
+                                    <td id="iw-rating"></td>
+                                </tr>
+                                <tr id="iw-website-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Website:</td>
+                                    <td id="iw-website"></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
 
                 </div>
+
+
                 <!-- ************* Searching section ************* -->
                 <div class="col-md-6 col-sm-12">
                     <h1>Search your future holiday</h1>
                     <div>
-                    <h3 class="">Place:</h3>
-                    
-                    <div>
-                    <div id="accordion">
-  <h3>Section 1</h3>
-  <div>
-    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
-  </div>
-  <h3>Section 2</h3>
-  <div>
-    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
-  </div>
-  <h3>Section 3</h3>
-  <div>
-    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
-    <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
-    </ul>
-  </div>
-  <h3>Section 4</h3>
-  <div>
-    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-  </div>
-</div>
- 
-                    
-                    <h3 class="">City:</h3>
-                    </div>
-                    
-                    <div>
-                    <h3 class="">Type:</h3>
+                        <h3 class="">Place:</h3>
+
+                        <div>
+                            <div id="accordion">
+                                <h3>Europe</h3>
+                                <div>
+                                    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo
+                                        ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                                </div>
+                                <h3>North America</h3>
+                                <div>
+                                    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                        suscipit faucibus urna. </p>
+                                </div>
+                                <h3>Asia</h3>
+                                <div>
+                                    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna
+                                        quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+                                    <ul>
+                                        <li>List item one</li>
+                                        <li>List item two</li>
+                                        <li>List item three</li>
+                                    </ul>
+                                </div>
+                                <h3>Australia</h3>
+                                <div>
+                                    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris
+                                        vel est. </p>
+                                    <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                                </div>
+                            </div>
+
+
+                            <h3 class="">City:</h3>
+                        </div>
+
+                        <div>
+                            <h3 class="">Type:</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
     <!-- ************* End of Main Content ************* -->
@@ -101,10 +166,10 @@
     <!-- ************* End of Footer ************* -->
 
     <!-- ************* Scripts ************* -->
-    
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="sources/js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="sources/js/jquery.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="sources/js/main.js"></script>
