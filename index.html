@@ -102,14 +102,13 @@
                             </table>
                         </div>
                     </div>
-
                 </div>
-
 
                 <!-- ************* Searching section ************* -->
                 <div class="col-md-6 col-sm-12">
                     <h1>Search your future holiday</h1>
                     <div>
+                        <!-- ************* Place Searching section ************* -->
                         <div>
                             <h3 class="">Place:</h3>
                             <div id="accordion">
@@ -140,46 +139,49 @@
                                     <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
                                 </div>
                             </div>
-
                         </div>
 
-
+                        <!-- ************* City Searching section ************* -->
                         <div>
                             <div id="findhotels">
                                 <h3 class="">City:</h3>
                             </div>
-
                             <div id="locationField">
                                 <input id="autocomplete" placeholder="Enter a city" type="text" />
                             </div>
-
                         </div>
 
-
-
+                        <!-- ************* Type Searching section ************* -->
                         <div>
-
                             <h3 class="">Type:</h3>
-                           <form>
-                              
-                           
-                            <input type="radio" name="type" id="all-radio" checked="checked">
-                            <label for="all-radio">All</label>
+                            <form>
+                                <input type="radio" name="type" id="all-radio" checked="checked">
+                                <label for="all-radio">All</label>
 
-                            <input type="radio" name="type" id="accommodation-radio">
-                            <label for="accommodation-radio">Accommodation</label>
-                            
-                             <input type="radio" name="type" id="restaurant-radio">
-                            <label for="restaurant-radio">Restaurants/Bars/Cafes</label>
-                            
-                             <input type="radio" name="type" id="museum-radio">
-                            <label for="museum-radio">Establishments</label>
-                            
-                            <input type="radio" name="type" id="attraction-radio">
-                            <label for="attraction-radio">Establishments</label>
-                        </form>
+                                <input type="radio" name="type" id="accommodation-radio">
+                                <label for="accommodation-radio">Accommodation</label>
+
+                                <input type="radio" name="type" id="restaurant-radio">
+                                <label for="restaurant-radio">Restaurants/Bars/Cafes</label>
+
+                                <input type="radio" name="type" id="museum-radio">
+                                <label for="museum-radio">Museums</label>
+
+                                <input type="radio" name="type" id="attraction-radio">
+                                <label for="attraction-radio">Attractions</label>
+                            </form>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ************* Reset map section ************* -->
+        <section>
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <button id="reset-button" type="button" class="btn btn-primary" onclick="reset()">Reset</button>
                 </div>
             </div>
         </section>
