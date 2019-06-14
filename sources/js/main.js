@@ -57,6 +57,11 @@
         'uk': {
             center: { lat: 54.8, lng: -4.6 },
             zoom: 5
+        },
+        
+        'sk': {
+            center: { lat: 48.7, lng: 19.7 },
+            zoom: 7
         }
     };
 

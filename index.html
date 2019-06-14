@@ -29,23 +29,24 @@
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter" href="#">About</a>
                     </li>
-                     <!-- Modal for About -->
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>I also express the energy of different compositions by using different painting techniques, by applying paint with a palette knife and gestural brush-strokes and by using a mix of geometrical shapes. Colors are
-                                            also very important to me because I want to achieve a harmony by combining warm and cold colors. I use a wide variety of tools and materials to create art pieces in a variety of sizes. I primarily work with
-                                            acrylics, watercolours, enamel, inks as well as advanced digital technology. Some of my art works are in a private collections. Perfect for... Anniversary, Wedding, Graduation and Birthday gifts. Kids room art,
-                                            Baby nursery art, Kitchen art, Modern Wall Art, Home decor, Contemporary Art. For more information please visit my website: <br> <a href="https://www.etsy.com/shop/SajanekART"> https://www.etsy.com/shop/SajanekART</a><br>                                            Thank you, <br> Vladimir Sajanek</p>
-                                    </div>
+                    <!-- Modal for About -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>I also express the energy of different compositions by using different painting techniques, by applying paint with a palette knife and gestural brush-strokes and by using a mix of geometrical shapes. Colors are also
+                                        very important to me because I want to achieve a harmony by combining warm and cold colors. I use a wide variety of tools and materials to create art pieces in a variety of sizes. I primarily work with acrylics,
+                                        watercolours, enamel, inks as well as advanced digital technology. Some of my art works are in a private collections. Perfect for... Anniversary, Wedding, Graduation and Birthday gifts. Kids room art, Baby nursery
+                                        art, Kitchen art, Modern Wall Art, Home decor, Contemporary Art. For more information please visit my website: <br> <a href="https://www.etsy.com/shop/SajanekART"> https://www.etsy.com/shop/SajanekART</a><br> Thank
+                                        you, <br> Vladimir Sajanek</p>
                                 </div>
                             </div>
                         </div>
-                        
+                    </div>
+
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#">Contact</a>
                     </li>
@@ -87,17 +88,26 @@
 
     <!-- ************* Main Content ************* -->
     <main>
+        <!-- ************* Google Map/Searching section ************* -->
         <section>
             <div class="row">
-                <!-- ************* Map section ************* -->
+
                 <div class="col-md-6 col-sm-12">
+                    <div id="map"></div>
+                </div>
 
-                    <div id="locationField">
-                        <input id="autocomplete" placeholder="Enter a city" type="text" />
-                    </div>
-
-                    <div id="controls">
-                        <select id="country">
+                <!-- ************* Searching section ************* -->
+                <div class="col-md-6 col-sm-12">
+                    <h1>Search your future holiday</h1>
+                    <div>
+                        <!-- ************* Place Searching section ************* -->
+                        <div>
+                            <h3 class="">Place:</h3>
+                            <div id="accordion">
+                                <h3>Europe</h3>
+                                <div>
+                                    <div id="controls">
+                                        <select id="country">
         <option value="all">All</option>
         <option value="au">Australia</option>
         <option value="br">Brazil</option>
@@ -112,63 +122,14 @@
         <option value="pt">Portugal</option>
         <option value="us" selected>U.S.A.</option>
         <option value="uk">United Kingdom</option>
+        <option value="sk">Slovakia</option>
       </select>
-                    </div>
-
-                    <div id="map"></div>
-
-                    <div id="listing">
-                        <table id="resultsTable">
-                            <tbody id="results"></tbody>
-                        </table>
-                    </div>
-
-                    <div style="display: none">
-                        <div id="info-content">
-                            <table>
-                                <tr id="iw-url-row" class="iw_table_row">
-                                    <td id="iw-icon" class="iw_table_icon"></td>
-                                    <td id="iw-url"></td>
-                                </tr>
-                                <tr id="iw-address-row" class="iw_table_row">
-                                    <td class="iw_attribute_name">Address:</td>
-                                    <td id="iw-address"></td>
-                                </tr>
-                                <tr id="iw-phone-row" class="iw_table_row">
-                                    <td class="iw_attribute_name">Telephone:</td>
-                                    <td id="iw-phone"></td>
-                                </tr>
-                                <tr id="iw-rating-row" class="iw_table_row">
-                                    <td class="iw_attribute_name">Rating:</td>
-                                    <td id="iw-rating"></td>
-                                </tr>
-                                <tr id="iw-website-row" class="iw_table_row">
-                                    <td class="iw_attribute_name">Website:</td>
-                                    <td id="iw-website"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ************* Searching section ************* -->
-                <div class="col-md-6 col-sm-12">
-                    <h1>Search your future holiday</h1>
-                    <div>
-                        <!-- ************* Place Searching section ************* -->
-                        <div>
-                            <h3 class="">Place:</h3>
-                            <div id="accordion">
-                                <h3>Europe</h3>
-                                <div>
-                                    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo
-                                        ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                                    </div>
                                 </div>
                                 <h3>North America</h3>
                                 <div>
-                                    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-                                        suscipit faucibus urna. </p>
-                                </div>
+                                    <p>jdhdb</p>
+                                   </div>
                                 <h3>Asia</h3>
                                 <div>
                                     <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna
@@ -232,36 +193,78 @@
                 </div>
             </div>
         </section>
+        <!-- ************* Results map section ************* -->
+        <section>
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <div id="listing">
+                        <table id="resultsTable">
+                            <tbody id="results"></tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none">
+                        <div id="info-content">
+                            <table>
+                                <tr id="iw-url-row" class="iw_table_row">
+                                    <td id="iw-icon" class="iw_table_icon"></td>
+                                    <td id="iw-url"></td>
+                                </tr>
+                                <tr id="iw-address-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Address:</td>
+                                    <td id="iw-address"></td>
+                                </tr>
+                                <tr id="iw-phone-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Telephone:</td>
+                                    <td id="iw-phone"></td>
+                                </tr>
+                                <tr id="iw-rating-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Rating:</td>
+                                    <td id="iw-rating"></td>
+                                </tr>
+                                <tr id="iw-website-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Website:</td>
+                                    <td id="iw-website"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
     <!-- ************* End of Main Content ************* -->
 
     <!-- ************* Footer ************* -->
     <footer class="container-fluid">
-<h3 class="">Connect with us:</h3>
-<ul class="social-links">
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.facebook.com/Sajanek-Art-1942585342461093/">
+        <h3 class="">Connect with us:</h3>
+        <ul class="social-links">
+            <li class="list-inline-item">
+                <a target="_blank" href="https://www.facebook.com/Sajanek-Art-1942585342461093/">
                             <i class="fab fa-facebook-square" aria-hidden="true"></i>
                             <span class="sr-only">Facebook</span>
                         </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://pin.it/45egpev7rctbvh">
+            </li>
+            <li class="list-inline-item">
+                <a target="_blank" href="https://pin.it/45egpev7rctbvh">
                             <i class="fab fa-pinterest-square" aria-hidden="true"></i>
                             <span class="sr-only">Pinterest</span>
                         </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.instagram.com/vsajanek/">
+            </li>
+            <li class="list-inline-item">
+                <a target="_blank" href="https://www.instagram.com/vsajanek/">
                             <i class="fab fa-instagram" aria-hidden="true"></i>
                             <span class="sr-only">Instagram</span>
                         </a>
-                    </li>
-                </ul>
-                <div class="footer-copyright text-center">
-        © 2019 Copyright:
-        <a href="index.html">Vladimir Sajanek</a>
-      </div>
+            </li>
+        </ul>
+        <div class="footer-copyright text-center">
+            © 2019 Copyright:
+            <a href="index.html">Vladimir Sajanek</a>
+        </div>
     </footer>
     <!-- ************* End of Footer ************* -->
 

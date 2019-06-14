@@ -2,8 +2,12 @@ body {
     height: 100%;
     margin: 0;
     background-color: #55238e;
-    background-image: linear-gradient(to bottom right, #55238e, #421377);
     background-repeat: no-repeat;
+}
+
+#map {
+    min-height: 400px !important;
+    text-align: center;
 }
 
 #logo {
