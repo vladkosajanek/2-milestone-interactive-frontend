@@ -100,14 +100,14 @@
                 <div class="col-md-6 col-sm-12">
                     <h1>Search your future holiday</h1>
                     <div>
-                        <!-- ************* Place Searching section ************* -->
-                        <div>
-                            <h3 class="">Place:</h3>
-                            <div id="accordion">
-                                <h3>Europe</h3>
-                                <div>
-                                    <div id="controls">
-                                        <select id="country">
+
+
+                        <div id="accordion">
+                            <!-- ************* Place Searching section ************* -->
+                            <h3>Place:</h3>
+                            <div>
+                                <div id="controls">
+                                    <select id="country">
         <option value="all">All</option>
         <option value="au">Australia</option>
         <option value="br">Brazil</option>
@@ -124,60 +124,39 @@
         <option value="uk">United Kingdom</option>
         <option value="sk">Slovakia</option>
       </select>
-                                    </div>
-                                </div>
-                                <h3>North America</h3>
-                                <div>
-                                    <p>jdhdb</p>
-                                   </div>
-                                <h3>Asia</h3>
-                                <div>
-                                    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna
-                                        quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
-                                    <ul>
-                                        <li>List item one</li>
-                                        <li>List item two</li>
-                                        <li>List item three</li>
-                                    </ul>
-                                </div>
-                                <h3>Australia</h3>
-                                <div>
-                                    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris
-                                        vel est. </p>
-                                    <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- ************* City Searching section ************* -->
-                        <div>
-                            <div id="findhotels">
-                                <h3 class="">City:</h3>
+                            <!-- ************* City Searching section ************* -->
+                            <h3>City:</h3>
+                            <div>
+                                <div id="findhotels">
+                                    <h3 class="">City:</h3>
+                                </div>
+                                <div id="locationField">
+                                    <input id="autocomplete" placeholder="Enter a city" type="text" />
+                                </div>
                             </div>
-                            <div id="locationField">
-                                <input id="autocomplete" placeholder="Enter a city" type="text" />
+                            <!-- ************* Type Searching section ************* -->
+                            <h3>Type:</h3>
+                            <div>
+                                <form>
+                                    <input type="radio" name="type" id="all-radio" checked="checked">
+                                    <label for="all-radio">All</label>
+
+                                    <input type="radio" name="type" id="accommodation-radio">
+                                    <label for="accommodation-radio">Accommodation</label>
+
+                                    <input type="radio" name="type" id="restaurant-radio">
+                                    <label for="restaurant-radio">Restaurants/Bars/Cafes</label>
+
+                                    <input type="radio" name="type" id="museum-radio">
+                                    <label for="museum-radio">Museums</label>
+
+                                    <input type="radio" name="type" id="attraction-radio">
+                                    <label for="attraction-radio">Attractions</label>
+                                </form>
                             </div>
-                        </div>
 
-                        <!-- ************* Type Searching section ************* -->
-                        <div>
-                            <h3 class="">Type:</h3>
-                            <form>
-                                <input type="radio" name="type" id="all-radio" checked="checked">
-                                <label for="all-radio">All</label>
-
-                                <input type="radio" name="type" id="accommodation-radio">
-                                <label for="accommodation-radio">Accommodation</label>
-
-                                <input type="radio" name="type" id="restaurant-radio">
-                                <label for="restaurant-radio">Restaurants/Bars/Cafes</label>
-
-                                <input type="radio" name="type" id="museum-radio">
-                                <label for="museum-radio">Museums</label>
-
-                                <input type="radio" name="type" id="attraction-radio">
-                                <label for="attraction-radio">Attractions</label>
-                            </form>
                         </div>
                     </div>
                 </div>
