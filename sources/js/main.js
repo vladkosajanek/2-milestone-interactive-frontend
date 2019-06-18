@@ -112,31 +112,58 @@
         if ($('#all-radio').is(':checked')) {
             var place = autocomplete.getPlace();
             if (place.geometry) {
-            map.panTo(place.geometry.location);
-            map.setZoom(15);
-            searchAll();
+                map.panTo(place.geometry.location);
+                map.setZoom(15);
+                searchAll();
+            }
+            else {
+                $('#autocomplete').attr("placeholder", "Enter a city");
+            }
         }
-        else {
-            $('#autocomplete').attr("placeholder", "Enter a city");
-        }
-    }
-    
         else if ($('#accommodation-radio').is(':checked')) {
             var place = autocomplete.getPlace();
             if (place.geometry) {
-            map.panTo(place.geometry.location);
-            map.setZoom(15);
-            searchAccommodation();
+                map.panTo(place.geometry.location);
+                map.setZoom(15);
+                searchAccommodation();
+            }
+            else {
+                $('#autocomplete').attr("placeholder", "Enter a city");
+            }
         }
-        else {
-            $('#autocomplete').attr("placeholder", "Enter a city");
+        else if ($('#restaurant-radio').is(':checked')) {
+            var place = autocomplete.getPlace();
+            if (place.geometry) {
+                map.panTo(place.geometry.location);
+                map.setZoom(15);
+                searchRestaurant();
+            }
+            else {
+                $('#autocomplete').attr("placeholder", "Enter a city");
+            }
         }
-    }
-    
-     
-     
-     
-        
+        else if ($('#museum-radio').is(':checked')) {
+            var place = autocomplete.getPlace();
+            if (place.geometry) {
+                map.panTo(place.geometry.location);
+                map.setZoom(15);
+                searchMuseum();
+            }
+            else {
+                $('#autocomplete').attr("placeholder", "Enter a city");
+            }
+        }
+        else if ($('#attraction-radio').is(':checked')) {
+            var place = autocomplete.getPlace();
+            if (place.geometry) {
+                map.panTo(place.geometry.location);
+                map.setZoom(15);
+                searchAttraction();
+            }
+            else {
+                $('#autocomplete').attr("placeholder", "Enter a city");
+            }
+        }
     }
 
     // Search for all attractions, hotels, museums, restaurants.... in the selected city, within the viewport of the map.
@@ -171,7 +198,7 @@
             }
         });
     }
-    
+
     // Search for all accomodation in the selected city, within the viewport of the map.
     function searchAccommodation() {
         var search = {
