@@ -1,7 +1,7 @@
     var map, places, infoWindow;
     var markers = [];
     var autocomplete;
-    var countryRestrict = { 'country': [ ] };
+    var countryRestrict = { 'country': [] };
     var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
     var hostnameRegexp = new RegExp('^https?://.+?/');
 
@@ -94,30 +94,42 @@
 
         autocomplete.addListener('place_changed', onPlaceChanged);
 
+        // DOM event listeners to react when the user selects a radio button.
+        document.getElementById('#all-radio').addEventListener('change', onPlaceChanged);
+        document.getElementById('#accommodation-radio').addEventListener('change', onPlaceChanged);
+        document.getElementById('#restaurant-radio').addEventListener('change', onPlaceChanged);
+        document.getElementById('#museum-radio').addEventListener('change', onPlaceChanged);
+        document.getElementById('#attraction-radio').addEventListener('change', onPlaceChanged);
+
+
         // Add a DOM event listener to react when the user selects a country.
-        document.getElementById('country').addEventListener(
-            'change', setAutocompleteCountry);
+        document.getElementById('country').addEventListener('change', setAutocompleteCountry);
     }
 
     // When the user selects a city, get the place details for the city and
     // zoom the map in on the city.
     function onPlaceChanged() {
-        var place = autocomplete.getPlace();
-        if (place.geometry) {
+        if ($('#all-radio').is(':checked')) {
+            var place = autocomplete.getPlace();
+            if (place.geometry) {
             map.panTo(place.geometry.location);
             map.setZoom(15);
-            search();
+            searchAll();
         }
         else {
-            document.getElementById('autocomplete').placeholder = 'Enter a city';
+            $('#autocomplete').attr("placeholder", "Enter a city");
         }
     }
+    
+    
+        
+    }
 
-    // Search for hotels in the selected city, within the viewport of the map.
-    function search() {
+    // Search for all attractions, hotels, museums, restaurants.... in the selected city, within the viewport of the map.
+    function searchAll() {
         var search = {
             bounds: map.getBounds(),
-            types: ['lodging']
+            types: []
         };
 
         places.nearbySearch(search, function(results, status) {
