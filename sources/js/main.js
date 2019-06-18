@@ -1,10 +1,11 @@
     var map, places, infoWindow;
     var markers = [];
     var autocomplete;
-    var countryRestrict = { 'country': 'us' };
+    var countryRestrict = { 'country': [ ] };
     var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
     var hostnameRegexp = new RegExp('^https?://.+?/');
 
+    //List of countries: zoom level and their coordinates
     var countries = {
         'au': {
             center: { lat: -25.3, lng: 133.8 },
@@ -58,7 +59,7 @@
             center: { lat: 54.8, lng: -4.6 },
             zoom: 5
         },
-        
+
         'sk': {
             center: { lat: 48.7, lng: 19.7 },
             zoom: 7
@@ -66,9 +67,10 @@
     };
 
     function initMap() {
+        $('#all-radio').prop("checked", true);
         map = new google.maps.Map(document.getElementById('map'), {
-            zoom: countries['us'].zoom,
-            center: countries['us'].center,
+            zoom: 3,
+            center: countries['sk'].center,
             mapTypeControl: false,
             panControl: false,
             zoomControl: false,
