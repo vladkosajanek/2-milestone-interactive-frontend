@@ -5,7 +5,7 @@
     var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
     var hostnameRegexp = new RegExp('^https?://.+?/');
 
-    //List of countries: zoom level and their coordinates
+//List of countries: zoom level and their coordinates
     var countries = {
         'au': {
             center: { lat: -25.3, lng: 133.8 },
@@ -51,6 +51,12 @@
             center: { lat: 39.4, lng: -8.2 },
             zoom: 6
         },
+        
+        sk': {
+            center: { lat: 48.7, lng: 19.7 },
+            zoom: 7
+        },
+        
         'us': {
             center: { lat: 37.1, lng: -95.7 },
             zoom: 3
@@ -58,11 +64,6 @@
         'uk': {
             center: { lat: 54.8, lng: -4.6 },
             zoom: 5
-        },
-
-        'sk': {
-            center: { lat: 48.7, lng: 19.7 },
-            zoom: 7
         }
     };
 
@@ -81,8 +82,8 @@
             content: document.getElementById('info-content')
         });
 
-        // Create the autocomplete object and associate it with the UI input control.
-        // Restrict the search to the default country, and to place type "cities".
+// Create the autocomplete object and associate it with the UI input control.
+// Restrict the search to the default country, and to place type "cities".
         autocomplete = new google.maps.places.Autocomplete(
             /** @type {!HTMLInputElement} */
             (
@@ -94,7 +95,7 @@
 
         autocomplete.addListener('place_changed', onPlaceChanged);
 
-        // DOM event listeners to react when the user selects a radio button.
+// DOM event listeners to react when the user selects a radio button.
         document.getElementById('#all-radio').addEventListener('change', onPlaceChanged);
         document.getElementById('#accommodation-radio').addEventListener('change', onPlaceChanged);
         document.getElementById('#restaurant-radio').addEventListener('change', onPlaceChanged);
@@ -102,8 +103,9 @@
         document.getElementById('#attraction-radio').addEventListener('change', onPlaceChanged);
 
 
-        // Add a DOM event listener to react when the user selects a country.
+// Add a DOM event listener to react when the user selects a country.
         document.getElementById('country').addEventListener('change', setAutocompleteCountry);
+        document.getElementById('reset').addEventListener("click", setAutocompleteCountry);
     }
 
     // When the user selects a city, get the place details for the city and
