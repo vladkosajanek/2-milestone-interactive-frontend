@@ -5,7 +5,7 @@
     var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
     var hostnameRegexp = new RegExp('^https?://.+?/');
 
-//List of countries: zoom level and their coordinates
+    //List of countries: zoom level and their coordinates
     var countries = {
         'au': {
             center: { lat: -25.3, lng: 133.8 },
@@ -51,12 +51,11 @@
             center: { lat: 39.4, lng: -8.2 },
             zoom: 6
         },
-        
-        sk': {
+
+        'sk': {
             center: { lat: 48.7, lng: 19.7 },
             zoom: 7
         },
-        
         'us': {
             center: { lat: 37.1, lng: -95.7 },
             zoom: 3
@@ -75,15 +74,16 @@
             mapTypeControl: false,
             panControl: false,
             zoomControl: false,
-            streetViewControl: false
+            streetViewControl: false,
+          
         });
 
         infoWindow = new google.maps.InfoWindow({
             content: document.getElementById('info-content')
         });
 
-// Create the autocomplete object and associate it with the UI input control.
-// Restrict the search to the default country, and to place type "cities".
+        // Create the autocomplete object and associate it with the UI input control.
+        // Restrict the search to the default country, and to place type "cities".
         autocomplete = new google.maps.places.Autocomplete(
             /** @type {!HTMLInputElement} */
             (
@@ -93,9 +93,10 @@
             });
         places = new google.maps.places.PlacesService(map);
 
-        autocomplete.addListener('place_changed', onPlaceChanged);
 
-// DOM event listeners to react when the user selects a radio button.
+
+        // DOM event listeners to react when the user selects a radio button.
+        autocomplete.addListener('place_changed', onPlaceChanged);
         document.getElementById('#all-radio').addEventListener('change', onPlaceChanged);
         document.getElementById('#accommodation-radio').addEventListener('change', onPlaceChanged);
         document.getElementById('#restaurant-radio').addEventListener('change', onPlaceChanged);
@@ -103,7 +104,7 @@
         document.getElementById('#attraction-radio').addEventListener('change', onPlaceChanged);
 
 
-// Add a DOM event listener to react when the user selects a country.
+        // Add a DOM event listener to react when the user selects a country.
         document.getElementById('country').addEventListener('change', setAutocompleteCountry);
         document.getElementById('reset').addEventListener("click", setAutocompleteCountry);
     }
@@ -234,7 +235,7 @@
         });
     }
 
-// Search for all restaurants, bars, pubs, cafes and clubs in the selected city, within the viewport of the map.
+    // Search for all restaurants, bars, pubs, cafes and clubs in the selected city, within the viewport of the map.
     function searchRestaurant() {
         var search = {
             bounds: map.getBounds(),
@@ -266,12 +267,12 @@
             }
         });
     }
-    
+
     // Search for all museums and art galleries in the selected city, within the viewport of the map.
     function searchMuseum() {
         var search = {
             bounds: map.getBounds(),
-            types: ['museum', 'art_gallery' ]
+            types: ['museum', 'art_gallery']
         };
 
         places.nearbySearch(search, function(results, status) {
@@ -299,12 +300,12 @@
             }
         });
     }
-    
+
     // Search for other attractions in the selected city, within the viewport of the map.
     function searchAttraction() {
         var search = {
             bounds: map.getBounds(),
-            types: ['church', 'zoo', 'park', 'mosque', 'hindu_temple' ]
+            types: ['church', 'zoo', 'park', 'mosque', 'hindu_temple']
         };
 
         places.nearbySearch(search, function(results, status) {
@@ -332,7 +333,7 @@
             }
         });
     }
-    
+
     function clearMarkers() {
         for (var i = 0; i < markers.length; i++) {
             if (markers[i]) {
@@ -345,7 +346,7 @@
     // Set the country restriction based on user input.
     // Also center and zoom the map on the given country.
     function setAutocompleteCountry() {
-        var country = document.getElementById('country').value;
+        var country = $('country').val();
         if (country == 'all') {
             autocomplete.setComponentRestrictions({ 'country': [] });
             map.setCenter({ lat: 15, lng: 0 });
@@ -365,6 +366,8 @@
             markers[i].setMap(map);
         };
     }
+
+    //Results below ma and search form.
 
     function addResult(result, i) {
         var results = document.getElementById('results');
@@ -400,6 +403,7 @@
 
     // Get the place details for a hotel. Show the information in an info window,
     // anchored on the marker for the hotel that the user selected.
+
     function showInfoWindow() {
         var marker = this;
         places.getDetails({ placeId: marker.placeResult.place_id },
@@ -413,6 +417,7 @@
     }
 
     // Load the place information into the HTML elements used by the info window.
+
     function buildIWContent(place) {
         document.getElementById('iw-icon').innerHTML = '<img class="hotelIcon" ' +
             'src="' + place.icon + '"/>';
