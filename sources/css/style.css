@@ -1,6 +1,7 @@
 body {
     height: 100%;
     margin: 0;
+    padding: 0;
     background-color: #55238e;
     background-repeat: no-repeat;
 }
@@ -92,4 +93,15 @@ form {
     margin: 0 auto;
     padding-top: 5%;
     padding-left: 2%;
+}
+
+footer {
+    background-color: #2e0e54;
+    height: 200px;
+    padding-top: 30px;
+}
+
+
+.footer-style {
+    padding: 20px;
 }
