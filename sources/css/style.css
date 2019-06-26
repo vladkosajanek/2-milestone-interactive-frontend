@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     padding-bottom: 30px;
     color: #ff5757;
 }
@@ -16,10 +16,46 @@ h3 {
     color: #5ce1e6;
 }
 
-.radio-container{
+.radio-container {
     display: block;
 }
 
+.search-container {
+    padding-bottom: 25px;
+}
+
+.reset-section {
+    text-align: center;
+}
+
+
+
+#reset {
+    margin: 50px auto;
+}
+
+.btn-primary {
+    background-color: #ff5757;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #5ce1e6;
+
+}
+
+.connect-section {
+    text-align: center;
+}
+
+a {
+    color: #ff5757;
+}
+
+a:hover {
+    color: #5ce1e6;
+    text-decoration: none;
+}
 form {
     display: block;
 }
