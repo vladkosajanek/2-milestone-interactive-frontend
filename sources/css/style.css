@@ -5,9 +5,30 @@ body {
     background-repeat: no-repeat;
 }
 
-#map {
-    min-height: 400px !important;
+h1 {
     text-align: center;
+    padding-bottom: 30px;
+    color: #ff5757;
+}
+
+h3 {
+    padding-bottom: 10px;
+    color: #5ce1e6;
+}
+
+.radio-container{
+    display: block;
+}
+
+form {
+    display: block;
+}
+
+#map {
+    min-height: 500px !important;
+    text-align: center;
+    border: solid 15px #ffffff;
+    border-radius: 25px;
 }
 
 #logo {
@@ -21,4 +42,18 @@ body {
 
 .navbar-nav {
     padding-left: 60%;
+}
+
+.col-items {
+    margin: auto;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 5%;
+
+}
+
+#search-items {
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-left: 2%;
 }

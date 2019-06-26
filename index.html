@@ -92,21 +92,18 @@
         <section>
             <div class="row">
 
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12 col-items">
                     <div id="map"></div>
                 </div>
 
                 <!-- ************* Searching section ************* -->
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12" id="search-items">
                     <h1>Search your future holiday</h1>
                     <div>
-                        
-                        
-                            <!-- ************* Place Searching section ************* -->
-                            <h3>Country:</h3>
-                            <div>
-
-                                <select id="country">
+                        <!-- ************* Place Searching section ************* -->
+                        <h3>Country:</h3>
+                        <div>
+                            <select id="country">
                                         <option value="all">All</option>
                                         <option value="au">Australia</option>
                                         <option value="br">Brazil</option>
@@ -124,37 +121,43 @@
                                         <option value="sk">Slovakia</option>
                                      </select>
 
-                            </div>
-                            <!-- ************* City Searching section ************* -->
-                            <h3>City:</h3>
-                            <div>
-                                <div id="findhotels"></div>
+                        </div>
+                        <!-- ************* City Searching section ************* -->
+                        <h3>City:</h3>
+                        <div>
+                            <div id="findhotels"></div>
 
-                                <div id="locationField">
-                                    <input id="autocomplete" placeholder="Enter a city" type="text" />
+                            <div id="locationField">
+                                <input id="autocomplete" placeholder="Enter a city" type="text" />
+                            </div>
+                        </div>
+                        <!-- ************* Type Searching section ************* -->
+                        <h3>Type:</h3>
+                        <div>
+                            <form action="" method="">
+                                <div class="radio-container">
+                                <input type="radio" name="type" id="all-radio" checked="checked">
+                                <label for="all-radio">All</label>
                                 </div>
-                            </div>
-                            <!-- ************* Type Searching section ************* -->
-                            <h3>Type:</h3>
-                            <div>
-                                <form>
-                                    <input type="radio" name="type" id="all-radio" checked="checked">
-                                    <label for="all-radio">All</label>
+                                <div class="radio-container">
+                                <input type="radio" name="type" id="accommodation-radio">
+                                <label for="accommodation-radio">Accommodation</label>
+                                </div>
+                                <div class="radio-container">
+                                <input type="radio" name="type" id="restaurant-radio">
+                                <label for="restaurant-radio">Restaurants/Bars/Cafes</label>
+                                </div>
+                                <div class="radio-container">
+                                <input type="radio" name="type" id="museum-radio">
+                                <label for="museum-radio">Museums&Art Galleries</label>
+                                </div>
+                                <div class="radio-container">
+                                <input type="radio" name="type" id="attraction-radio">
+                                <label for="attraction-radio">Attractions</label>
+                                </div>
+                            </form>
+                        </div>
 
-                                    <input type="radio" name="type" id="accommodation-radio">
-                                    <label for="accommodation-radio">Accommodation</label>
-
-                                    <input type="radio" name="type" id="restaurant-radio">
-                                    <label for="restaurant-radio">Restaurants/Bars/Cafes</label>
-
-                                    <input type="radio" name="type" id="museum-radio">
-                                    <label for="museum-radio">Museums&Art Galleries</label>
-
-                                    <input type="radio" name="type" id="attraction-radio">
-                                    <label for="attraction-radio">Attractions</label>
-                                </form>
-                            </div>
-                        
                     </div>
                 </div>
             </div>

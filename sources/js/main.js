@@ -173,7 +173,7 @@
     function searchAll() {
         var search = {
             bounds: map.getBounds(),
-            types: []
+            types: ['lodging', 'restaurant', 'bar', 'cafe', 'night_club', 'museum', 'art_gallery', 'church', 'zoo', 'park', 'mosque', 'hindu_temple']
         };
 
         places.nearbySearch(search, function(results, status) {
