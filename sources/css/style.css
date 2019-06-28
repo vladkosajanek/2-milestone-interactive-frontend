@@ -111,3 +111,13 @@ footer {
     font-size: 200%;
     padding: 20px;
 }
+
+.modal-header, .modal-footer {
+    background-color: rgba(46, 14, 84, 0.9);
+}
+
+.modal-content {
+  
+    background-color: rgba(85, 35, 142, 0.95);
+    
+}
