@@ -97,11 +97,11 @@
 
         // DOM event listeners to react when the user selects a radio button.
         autocomplete.addListener('place_changed', onPlaceChanged);
-        document.getElementById('#all-radio').addEventListener('change', onPlaceChanged);
-        document.getElementById('#accommodation-radio').addEventListener('change', onPlaceChanged);
-        document.getElementById('#restaurant-radio').addEventListener('change', onPlaceChanged);
-        document.getElementById('#museum-radio').addEventListener('change', onPlaceChanged);
-        document.getElementById('#attraction-radio').addEventListener('change', onPlaceChanged);
+        document.getElementById('all-radio').addEventListener('change', onPlaceChanged);
+        document.getElementById('accommodation-radio').addEventListener('change', onPlaceChanged);
+        document.getElementById('restaurant-radio').addEventListener('change', onPlaceChanged);
+        document.getElementById('museum-radio').addEventListener('change', onPlaceChanged);
+        document.getElementById('attraction-radio').addEventListener('change', onPlaceChanged);
 
 
         // Add a DOM event listener to react when the user selects a country.
