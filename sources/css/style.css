@@ -33,6 +33,7 @@ h3 {
 
 #reset {
     margin: 50px auto;
+    border-radius: 25px;
 }
 
 .btn-primary {
@@ -103,5 +104,10 @@ footer {
 
 
 .footer-style {
+    padding: 20px;
+}
+
+.fab {
+    font-size: 200%;
     padding: 20px;
 }
