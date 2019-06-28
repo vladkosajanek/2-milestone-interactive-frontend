@@ -346,7 +346,7 @@
     // Set the country restriction based on user input.
     // Also center and zoom the map on the given country.
     function setAutocompleteCountry() {
-        var country = $('country').val();
+        var country = $('#country').val();
         if (country == 'all') {
             autocomplete.setComponentRestrictions({ 'country': [] });
             map.setCenter({ lat: 15, lng: 0 });
@@ -471,3 +471,7 @@
         }
     }
     
+     //Reset function - Resets all previous searching
+     function reset(){
+            
+        }
