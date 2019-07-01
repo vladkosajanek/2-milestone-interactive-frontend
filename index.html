@@ -123,21 +123,25 @@
 
                         </div>
                         <!-- ************* City Searching section ************* -->
+                        
+
                         <h3>City:</h3>
                         <div class="search-container">
                             <div id="findhotels"></div>
 
-                            <div id="locationField">
-                                <input id="autocomplete" placeholder="Enter a city" type="text" />
+                            <div id="locationField" class="form-group">
+                                
+                                <input id="autocomplete" class="form-control form-control-lg" placeholder="Enter a city" type="text" />
                             </div>
                         </div>
                         <!-- ************* Type Searching section ************* -->
                         <h3>Type:</h3>
                         <div>
                             <form action="" method="">
-                                <div class="radio-container">
-                                <input type="radio" name="type" id="all-radio" checked="checked">
-                                <label for="all-radio">All</label>
+                                <div class="form-group">
+                                <div class="custom-control custom-radio">
+                                <input type="radio" name="type" id="all-radio" class="custom-control-input" checked="checked">
+                                <label for="all-radio" class="custom-control-label">All</label>
                                 </div>
                                 <div class="radio-container">
                                 <input type="radio" name="type" id="accommodation-radio">
@@ -154,6 +158,7 @@
                                 <div class="radio-container">
                                 <input type="radio" name="type" id="attraction-radio">
                                 <label for="attraction-radio">Attractions</label>
+                                </div>
                                 </div>
                             </form>
                         </div>
