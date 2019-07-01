@@ -178,3 +178,7 @@ tr {
     color: #000000 !important;
 
 }
+
+input[type=radio]:checked ~ label {
+    color: #ff5757;
+}
