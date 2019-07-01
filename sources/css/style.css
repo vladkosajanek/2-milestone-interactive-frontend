@@ -58,6 +58,12 @@ a:hover {
     color: #5ce1e6;
     text-decoration: none;
 }
+
+.btn-primary:active {
+    box-shadow: none;
+  
+}
+
 form {
     display: block;
 }
@@ -120,4 +126,28 @@ footer {
   
     background-color: rgba(85, 35, 142, 0.95);
     
+}
+
+#resultsTable {
+  
+    width:100%;
+    
+}
+
+table {
+    font-size: 150%;
+    color: #000000;
+
+}
+
+#listing {
+    margin:40px;
+}
+
+img {
+    height: 120%;
+}
+
+tr {
+    background-color: #ffffff;
 }

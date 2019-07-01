@@ -367,7 +367,7 @@
         };
     }
 
-    //Results below ma and search form.
+    //Results below map and search form.
 
     function addResult(result, i) {
         var results = document.getElementById('results');
@@ -375,7 +375,7 @@
         var markerIcon = MARKER_PATH + markerLetter + '.png';
 
         var tr = document.createElement('tr');
-        tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+        tr.style.backgroundColor = (i % 2 === 0 ? '#2e0e54' : '#55238e');
         tr.onclick = function() {
             google.maps.event.trigger(markers[i], 'click');
         };
