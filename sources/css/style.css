@@ -61,7 +61,7 @@ a:hover {
 
 .btn-primary:active {
     box-shadow: none;
-  
+
 }
 
 form {
@@ -125,20 +125,21 @@ form {
     padding: 20px;
 }
 
-.modal-header, .modal-footer {
+.modal-header,
+.modal-footer {
     background-color: rgba(46, 14, 84, 0.9);
 }
 
 .modal-content {
-  
+
     background-color: rgba(85, 35, 142, 0.95);
-    
+
 }
 
 #resultsTable {
-  
-    width:100%;
-    
+
+    width: 100%;
+
 }
 
 table {
@@ -148,7 +149,7 @@ table {
 }
 
 #listing {
-    margin:40px;
+    margin: 40px;
 }
 
 img {
@@ -166,7 +167,7 @@ tr {
 
 
 .gm-style .gm-style-iw-c,
-.gm-style .gm-style-iw-d, 
+.gm-style .gm-style-iw-d,
 #info-content,
 #iw-url-row.iw_table_row,
 #iw-address-row,
@@ -179,6 +180,18 @@ tr {
 
 }
 
-input[type=radio]:checked ~ label {
+input[type=radio]:checked~label {
     color: #ff5757;
+}
+
+label,
+.radio label,
+.checkbox label,
+.help-block {
+    font-size: 1rem;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #ff5757;
+    background-color: #ff5757;
 }
