@@ -75,7 +75,7 @@
             panControl: false,
             zoomControl: false,
             streetViewControl: false,
-          
+
         });
 
         infoWindow = new google.maps.InfoWindow({
@@ -349,8 +349,8 @@
         var country = $('#country').val();
         if (country == 'all') {
             autocomplete.setComponentRestrictions({ 'country': [] });
-            map.setCenter({ lat: 15, lng: 0 });
-            map.setZoom(2);
+            map.setCenter({ lat: 48.7, lng: 19.7 });
+            map.setZoom(3);
         }
         else {
             autocomplete.setComponentRestrictions({ 'country': country });
@@ -470,8 +470,15 @@
             document.getElementById('iw-website-row').style.display = 'none';
         }
     }
+
+    //Reset function - Resets all previous searching
+    function reset() {
+        clearResults();
+        clearMarkers();
+        $('#country')[0].selectedIndex = 0;
+        $("#autocomplete").val("");
+        map.setCenter(countries["us"].center);
+        map.componentRestrictions = { 'country': [] };
+        place = "";
+    }
     
-     //Reset function - Resets all previous searching
-     function reset(){
-            
-        }
