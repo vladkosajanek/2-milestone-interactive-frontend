@@ -25,6 +25,10 @@ h3 {
     padding-bottom: 25px;
 }
 
+.search-section {
+    text-align: center;
+}
+
 .reset-section {
     text-align: center;
 }
@@ -91,32 +95,30 @@ form {
 .col-items {
     margin: auto;
     padding-top: 5%;
-    padding-left: 10%;
-    padding-right: 5%;
+    padding-left: 5%;
+    padding-right: 0;
 
 }
 
 #search-items {
     margin: 0 auto;
     padding-top: 5%;
-    padding-left: 2%;
+    padding-left: 5%;
 }
 
 .container-fluid {
     background-color: #2e0e54;
-    height: 200px;
     padding-top: 30px;
-    left: 0px;
-    bottom: 0px;
-    width: 100%!important;
-    position: static;
     margin: 0!important;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 
 .footer-copyright {
     background-color: #2e0e54;
-    padding: 20px 0;
+    padding-top: 20px;
+    width: 100%;
 }
 
 
@@ -184,6 +186,10 @@ input[type=radio]:checked~label {
     color: #ff5757;
 }
 
+input[type=text] {
+    color: #ff5757;
+}
+
 label,
 .radio label,
 .checkbox label,
@@ -194,4 +200,23 @@ label,
     color: #fff;
     border-color: #ff5757;
     background-color: #ff5757;
+}
+
+.form-control-lg {
+    
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #ff5757;
+
+}
+.form-control {
+
+    width: 75%;
+
+}
+
+
+/*resonsible dat mensie height loga kvoli abou a email section/
+#logo {
+    height: 50px;
 }
