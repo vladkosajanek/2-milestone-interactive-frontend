@@ -2,7 +2,7 @@
     var markers = [];
     var autocomplete;
     var countryRestrict = { 'country': [] };
-    var MARKER_PATH = 'http:// labs.google.com/ridefinder/images/mm_20_red';
+    var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
     var hostnameRegexp = new RegExp('^https?://.+?/');
 
     //List of countries: zoom level and their coordinates
