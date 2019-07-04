@@ -2,7 +2,7 @@
     var markers = [];
     var autocomplete;
     var countryRestrict = { 'country': [] };
-    var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
+    var MARKER_PATH = 'http:// labs.google.com/ridefinder/images/mm_20_red';
     var hostnameRegexp = new RegExp('^https?://.+?/');
 
     //List of countries: zoom level and their coordinates
@@ -173,7 +173,7 @@
     function searchAll() {
         var search = {
             bounds: map.getBounds(),
-            types: ['lodging', 'restaurant', 'bar', 'cafe', 'night_club', 'museum', 'art_gallery', 'church', 'zoo', 'park', 'mosque', 'hindu_temple']
+            types: ['restaurant', 'lodging', 'bar', 'cafe', 'night_club', 'museum', 'art_gallery', 'church', 'zoo', 'park', 'mosque', 'hindu_temple']
         };
 
         places.nearbySearch(search, function(results, status) {
